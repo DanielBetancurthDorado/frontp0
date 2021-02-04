@@ -15,7 +15,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("/usuarios", {
+    const response = await axios.post(process.env.REACT_APP_API_URL +"/usuarios", {
       login: username,
       contrasena: password,
     });
